@@ -1,0 +1,15 @@
+{
+  "type":"FeatureCollection",
+  "features": [
+    {"type":"Feature","properties":{"name":"Ward 1","municipality":"Municipality A","spi":0.62},"geometry":{"type":"Point","coordinates":[-0.115,51.507]}},
+    {"type":"Feature","properties":{"name":"Ward 2","municipality":"Municipality A","spi":0.58},"geometry":{"type":"Point","coordinates":[-0.11,51.506]}},
+    {"type":"Feature","properties":{"name":"Ward 3","municipality":"Municipality B","spi":0.48},"geometry":{"type":"Point","coordinates":[-0.085,51.507]}},
+    {"type":"Feature","properties":{"name":"Ward 4","municipality":"Municipality B","spi":0.52},"geometry":{"type":"Point","coordinates":[-0.08,51.506]}},
+    {"type":"Feature","properties":{"name":"Ward 5","municipality":"Municipality C","spi":0.33},"geometry":{"type":"Point","coordinates":[-0.05,51.507]}},
+    {"type":"Feature","properties":{"name":"Ward 6","municipality":"Municipality D","spi":0.72},"geometry":{"type":"Point","coordinates":[-0.115,51.494]}},
+    {"type":"Feature","properties":{"name":"Ward 7","municipality":"Municipality E","spi":0.55},"geometry":{"type":"Point","coordinates":[-0.08,51.494]}},
+    {"type":"Feature","properties":{"name":"Ward 8","municipality":"Municipality F","spi":0.42},"geometry":{"type":"Point","coordinates":[-0.05,51.494]}},
+    {"type":"Feature","properties":{"name":"Ward 9","municipality":"Municipality G","spi":0.80},"geometry":{"type":"Point","coordinates":[-0.02,51.507]}},
+    {"type":"Feature","properties":{"name":"Ward 10","municipality":"Municipality H","spi":0.28},"geometry":{"type":"Point","coordinates":[-0.02,51.494]}}
+  ]
+}

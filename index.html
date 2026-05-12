@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shared Prosperity Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Municipality & ward intelligence</p>
+        <h1>Shared Prosperity Dashboard</h1>
+        <p class="hero__text">
+          Explore exclusion, poverty, vulnerability, and SPI across your wards with a clean map-first layout and local shapefile data.
+        </p>
+      </div>
+
+      <div class="hero__tools">
+        <div class="control-group">
+          <label for="municipality-select">Municipality</label>
+          <select id="municipality-select">
+            <option value="">All Municipalities</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="pillar-select">Focus metric</label>
+          <select id="pillar-select">
+            <option value="combined_spi">SPI</option>
+            <option value="exclusion_index">Exclusion</option>
+            <option value="poverty_index">Poverty</option>
+            <option value="vulnerability_index">Vulnerability</option>
+          </select>
+        </div>
+
+        <label class="upload-chip">
+          <input id="shp-upload" type="file" accept=".zip" />
+          <span>Upload Shapefile ZIP</span>
+        </label>
+
+        <button id="download-csv" class="primary-btn">Download CSV</button>
+        <button id="export-pdf" class="secondary-btn">Print View</button>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="map-column">
+        <div class="panel map-panel">
+          <div class="panel__header">
+            <div>
+              <p class="panel__eyebrow">Interactive map</p>
+              <h2>Ward boundaries from your local shapefile</h2>
+            </div>
+            <div id="load-state" class="status-pill">Loading...</div>
+          </div>
+          <div id="map" class="map-canvas"></div>
+          <div class="legend-row">
+            <span>Low</span>
+            <div id="legend" class="legend-bar"></div>
+            <span>High</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="insights-column">
+        <div class="summary-grid" id="summary-cards"></div>
+
+        <div class="panel hero-metric">
+          <div class="panel__header panel__header--stacked">
+            <div>
+              <p class="panel__eyebrow">SPI overview</p>
+              <h2>Shared Prosperity score</h2>
+            </div>
+            <div id="scope-label" class="scope-label">All municipalities</div>
+          </div>
+          <div id="spi-gauge"></div>
+        </div>
+
+        <div class="mini-grid">
+          <div class="panel chart-panel">
+            <div class="panel__header panel__header--compact">
+              <div>
+                <p class="panel__eyebrow">Composition</p>
+                <h2>SPI drivers</h2>
+              </div>
+            </div>
+            <canvas id="composition-pie" height="180"></canvas>
+          </div>
+
+          <div class="panel chart-panel">
+            <div class="panel__header panel__header--compact">
+              <div>
+                <p class="panel__eyebrow">Ranked wards</p>
+                <h2>Top 5 by current metric</h2>
+              </div>
+            </div>
+            <div id="top-wards-bar"></div>
+          </div>
+        </div>
+
+        <div class="panel table-panel">
+          <div class="panel__header panel__header--compact">
+            <div>
+              <p class="panel__eyebrow">Ward table</p>
+              <h2>Rankings and details</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table id="ward-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Ward</th>
+                  <th>Municipality</th>
+                  <th>SPI</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/shpjs@3.5.0/dist/shp.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

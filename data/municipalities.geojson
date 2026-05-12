@@ -1,0 +1,13 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature","properties":{"name":"Municipality A","spi":0.62,"exclusion":28,"poverty":32,"vulnerability":40},"geometry":{"type":"Polygon","coordinates":[[[-0.12,51.51],[-0.1,51.51],[-0.1,51.503],[-0.12,51.503],[-0.12,51.51]]]}},
+    {"type":"Feature","properties":{"name":"Municipality B","spi":0.48,"exclusion":35,"poverty":35,"vulnerability":30},"geometry":{"type":"Polygon","coordinates":[[[-0.09,51.51],[-0.07,51.51],[-0.07,51.503],[-0.09,51.503],[-0.09,51.51]]]}},
+    {"type":"Feature","properties":{"name":"Municipality C","spi":0.33,"exclusion":40,"poverty":30,"vulnerability":30},"geometry":{"type":"Polygon","coordinates":[[[-0.06,51.51],[-0.04,51.51],[-0.04,51.503],[-0.06,51.503],[-0.06,51.51]]]}},
+    {"type":"Feature","properties":{"name":"Municipality D","spi":0.72,"exclusion":20,"poverty":30,"vulnerability":50},"geometry":{"type":"Polygon","coordinates":[[[-0.12,51.497],[-0.1,51.497],[-0.1,51.49],[-0.12,51.49],[-0.12,51.497]]]}},
+    {"type":"Feature","properties":{"name":"Municipality E","spi":0.55,"exclusion":25,"poverty":40,"vulnerability":35},"geometry":{"type":"Polygon","coordinates":[[[-0.09,51.497],[-0.07,51.497],[-0.07,51.49],[-0.09,51.49],[-0.09,51.497]]]}},
+    {"type":"Feature","properties":{"name":"Municipality F","spi":0.42,"exclusion":32,"poverty":38,"vulnerability":30},"geometry":{"type":"Polygon","coordinates":[[[-0.06,51.497],[-0.04,51.497],[-0.04,51.49],[-0.06,51.49],[-0.06,51.497]]]}},
+    {"type":"Feature","properties":{"name":"Municipality G","spi":0.80,"exclusion":15,"poverty":25,"vulnerability":60},"geometry":{"type":"Polygon","coordinates":[[[-0.03,51.51],[-0.01,51.51],[-0.01,51.503],[-0.03,51.503],[-0.03,51.51]]]}},
+    {"type":"Feature","properties":{"name":"Municipality H","spi":0.28,"exclusion":45,"poverty":30,"vulnerability":25},"geometry":{"type":"Polygon","coordinates":[[[-0.03,51.497],[-0.01,51.497],[-0.01,51.49],[-0.03,51.49],[-0.03,51.497]]]}}
+  ]
+}
